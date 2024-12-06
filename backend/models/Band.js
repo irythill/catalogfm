@@ -2,11 +2,11 @@
 const mongoose = require('mongoose')
 
 const bandSchema = new mongoose.Schema({
-  name: String,
-  genre: String,
-  year: Number,
-  description: String,
-  image: String
+  name: { type: String, required: true },
+  genre: { type: String, required: true },
+  year: { type: Number, required: true },
+  description: { type: String, required: true },
+  image: { type: String, required: true }
 })
 
 module.exports = mongoose.model('Band', bandSchema)
