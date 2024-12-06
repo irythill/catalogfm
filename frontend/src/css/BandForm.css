@@ -1,21 +1,32 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 12rem);
+  background-image: url('../assets/formbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: sepia(1) hue-rotate(190deg) saturate(0.6);
+}
+
 .band-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
   gap: 2rem;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  max-width: 500px;
-  margin: 2rem auto;
 }
 
-
 .band-form h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: #333;
+  font-size: 3rem;
   text-align: center;
+  color: #ccc;
 }
 
 .form-input,
@@ -23,28 +34,28 @@
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .form-textarea {
   resize: none;
-  height: 15rem;
+  height: 150px;
 }
 
 .form-input:focus,
 .form-textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
-  border-color: #495f8c;
   outline: none;
 }
 
 .form-button {
   background-color: #61dafb;
   color: #fff;
-  padding: 0.75rem;
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 5px;
   font-size: 1rem;

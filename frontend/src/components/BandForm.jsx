@@ -35,7 +35,7 @@ const BandForm = () => {
   }
 
   return (
-    <div className='band-form-container'>
+    <div className='form-container'>
       <form onSubmit={handleSubmit} className='band-form'>
         <h2>Add your band / artist</h2>
         <input 

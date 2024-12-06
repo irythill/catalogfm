@@ -41,41 +41,43 @@ const BandEdit = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='band-form'>
-      <h2>{name}</h2>
-      <input 
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder='Band or artist name'
-        className='form-input'
-        required
-      />
-      <input 
-        type="text"
-        value={genre}
-        onChange={(e) => setGenre(e.target.value)}
-        placeholder='Band or artist genre'
-        className='form-input'
-        required
-      />
-      <input 
-        type="number"
-        value={year}
-        onChange={(e) => setYear(e.target.value)}
-        placeholder='Band or artist year'
-        className='form-input'
-        required
-      />
-      <textarea 
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        placeholder='A small bio of your band / artist'
-        className='form-textarea'
-        required
-      />
-      <button type='submit' className='form-button'>Confirmar edição</button>
-    </form>
+    <div className='form-container'>
+      <form onSubmit={handleSubmit} className='band-form'>
+        <h2>{name}</h2>
+        <input 
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder='Band or artist name'
+          className='form-input'
+          required
+        />
+        <input 
+          type="text"
+          value={genre}
+          onChange={(e) => setGenre(e.target.value)}
+          placeholder='Band or artist genre'
+          className='form-input'
+          required
+        />
+        <input 
+          type="number"
+          value={year}
+          onChange={(e) => setYear(e.target.value)}
+          placeholder='Band or artist year'
+          className='form-input'
+          required
+        />
+        <textarea 
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder='A small bio of your band / artist'
+          className='form-textarea'
+          required
+        />
+        <button type='submit' className='form-button'>Confirmar edição</button>
+      </form>
+    </div>
   )
 }
 

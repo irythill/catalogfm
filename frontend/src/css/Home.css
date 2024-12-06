@@ -32,7 +32,7 @@
   position: relative;
   z-index: 2;
   text-align: left;
-  color: whitesmoke;
+  color: #ccc;
   background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 10px;
@@ -72,7 +72,7 @@
 
 .register-btn {
   background-color: #495f8c;
-  color: whitesmoke;
+  color: #ccc;
 }
 
 .learn-more-btn {
@@ -86,5 +86,5 @@
 
 .learn-more-btn:hover {
   background-color: #495f8c;
-  color: whitesmoke;
+  color: #ccc;
 }
