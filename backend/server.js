@@ -1,9 +1,8 @@
-// server
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const path = require('path')
-const bandsRoute = require('./routes/bands')
+const bandsRoute = require('./routes/bandRoutes')
 require('dotenv').config()
 
 const app = express()
