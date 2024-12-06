@@ -46,7 +46,10 @@ const BandList = () => {
 
   return (
     <div className="band-list-container">
-      <div className="band-list">
+      {bands.length === 0 ? (
+        <p className='no-bands-message'>Waiting for bands...</p>
+      ) : (
+        <div className="band-list">
         {bands.map(band => (
           <div key={band._id} className="band-card">
             <img src={`${API_URL}/${band.image}`} alt={band.name} className="band-image" />
@@ -67,6 +70,7 @@ const BandList = () => {
           </div>
         ))}
       </div>
+      )}
       <ConfirmationModal
         isOpen={isModalOpen}
         onRequestClose={handleCancelDelete}
