@@ -17,7 +17,6 @@
   justify-content: center;
   width: 30%;
   gap: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -32,37 +31,43 @@
 .form-input,
 .form-textarea {
   width: 100%;
+  height: 4rem;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #007bff;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   color: #ccc;
-  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.band-form, .form-input, .form-textarea, .form-button {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .form-textarea {
   resize: none;
-  height: 150px;
+  height: 20rem;
 }
 
 .form-input:focus,
 .form-textarea:focus {
-  border-color: #007bff;
+  border-color: #ccc;
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
   outline: none;
 }
 
 .form-button {
-  background-color: #61dafb;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  color: #ccc;
+  padding: 1.4rem;
+  max-width: 15rem;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .form-button:hover {
-  background-color: #21a1f1;
+  background-color: #ccc;
+  color: #000;
+  border: 1px solid;
 }
