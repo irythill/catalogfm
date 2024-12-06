@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import ConfirmationModal from './ConfirmationModal'
 import '../css/BandForm.css'
 
 const BandForm = () => {
@@ -9,12 +10,17 @@ const BandForm = () => {
   const [year, setYear] = useState('')
   const [description, setDescription] = useState('')
   const [image, setImage] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const navigate = useNavigate()
 
   const API_URL = 'http://localhost:5000'
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setIsModalOpen(true)
+  }
+
+  const handleConfirm = () =>  {
     const formData = new FormData()
     formData.append('name', name)
     formData.append('genre', genre)
@@ -34,6 +40,11 @@ const BandForm = () => {
     })
   }
 
+  const handleCancel = () => {
+    setIsModalOpen(false)
+    navigate('/add-band')
+  }
+  
   return (
     <div className='form-container'>
       <form onSubmit={handleSubmit} className='band-form'>
@@ -77,6 +88,11 @@ const BandForm = () => {
         />
         <button type='submit' className='form-button'>Register!</button>
       </form>
+      <ConfirmationModal
+      isOpen={isModalOpen}
+      onRequestClose={handleCancel}
+      onConfirm={handleConfirm}
+      />
     </div>
   )
 }

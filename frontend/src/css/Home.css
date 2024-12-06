@@ -62,29 +62,18 @@
   text-decoration: none;
   gap: 1rem;
 }
-.register-btn, .learn-more-btn {
+
+.register-btn {
   padding: 1.4rem;
   width: 10rem;
   border-radius: 1rem;
   font-size: 1.2rem;
   transition: 0.3s ease;
-}
-
-.register-btn {
   background-color: #495f8c;
   color: #ccc;
-}
-
-.learn-more-btn {
-  border: 1px solid #495f8c;
 }
 
 .register-btn:hover {
   background-color: #D4DCF1;
   color: #000;
-}
-
-.learn-more-btn:hover {
-  background-color: #495f8c;
-  color: #ccc;
 }

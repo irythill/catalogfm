@@ -61,7 +61,6 @@ const Home = () => {
         </p>
         <div className='buttons'>
           <Link to='/add-band' className='register-btn'>Start here</Link>
-          <Link to='/about' className='learn-more-btn'>Learn more</Link>
         </div>
       </div>
     </div>
