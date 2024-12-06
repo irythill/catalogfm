@@ -12,7 +12,20 @@ app.use(cors())
 app.use(express.json())
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
-mongoose.connect(process.env.MONGO_URI)
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
+    console.log('MongoDB connected!')
+  } catch (err) {
+    console.error(err.message)
+    process.exit(1)
+  }
+}
+
+connectDB()
 
 app.use('/bands', bandsRoute)
 
