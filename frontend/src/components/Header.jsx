@@ -10,7 +10,7 @@ const Header = () => {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/add-band'>Add a band</Link></li>
           <li><Link to='/bands'>Your bands</Link></li>
-          <li><Link to='/about'>About</Link></li>
+          <li><Link to='https://www.linkedin.com/in/hsp/' target='_blank'>About</Link></li>
         </ul>
       </nav>
     </header>
