@@ -64,8 +64,22 @@
 .band-actions a {
   color: #fff;
   font-size: 1.5rem;
+  transition: 0.3s ease;
 }
 
-.band-actions a:hover {
-  color: #007bff;
+.band-actions .delete-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: #7A93C9;
+}
+
+.delete-icon:hover {
+  color: #858585;
 }
