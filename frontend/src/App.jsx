@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // pages
 import Home from './pages/Home';
 import AddBand from './pages/AddBand';
-import UpdateBand from './pages/UpdateBand'
+import EditBand from './pages/EditBand'
 import DeleteBand from './pages/DeleteBand'
 // components
 import Layout from './components/Layout';
@@ -16,7 +16,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/bands' element={<BandList />} />
           <Route path='/add-band' element={<AddBand />} />
-          <Route path='/edit-band/:id' element={<UpdateBand />} />
+          <Route path='/edit-band/:id' element={<EditBand />} />
           <Route path='/delete-band/:id' element={<DeleteBand />} />
         </Routes>
       </Layout>

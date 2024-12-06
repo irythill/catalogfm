@@ -1,6 +1,6 @@
 import BandEdit from '../components/BandEdit'
 
-const UpdateBand = () => {
+const EditBand = () => {
   return (
     <div className="edit-band-page">
       <BandEdit />
@@ -8,4 +8,4 @@ const UpdateBand = () => {
   )
 }
 
-export default UpdateBand
+export default EditBand
