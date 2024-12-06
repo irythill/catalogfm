@@ -1,49 +1,57 @@
 .home-main {
-  display: grid;
-  place-items: center;
-  background: linear-gradient(#b7c1e0, #d9e2f3, #b7c1e0);
-  width: 100%;
-  height: 100%;
-  padding: 5rem;
-}
-
-.home-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  width: 100%;
-}
-
-.home-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  font-size: 1.5rem;
-}
-
-.home-left h1 {
-  font-size: 3rem;
-}
-
-.home-right {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 12rem);
+  overflow: hidden;
+  z-index: 1;
+  margin: 0;
 }
 
 .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 100vh;
+  height: 100%;
+  z-index: 0;
 }
 
 .carousel img {
   width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+  height: 100%;
+  object-fit: cover;
   filter: sepia(1) hue-rotate(190deg) saturate(0.6);
+}
+
+.home-content {
+  align-self: flex-start;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 30%;
+  margin-left: 5rem;
+}
+
+.home-content h1 {
+  font-size: 5.2rem;
+  margin-bottom: 1rem;
+}
+
+.home-content .highlight {
+  color: #b7c1e0;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .buttons {
@@ -55,9 +63,11 @@
   gap: 1rem;
 }
 .register-btn, .learn-more-btn {
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 1.4rem;
   width: 10rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
 }
 
 .register-btn {
@@ -67,4 +77,14 @@
 
 .learn-more-btn {
   border: 1px solid #495f8c;
+}
+
+.register-btn:hover {
+  background-color: #D4DCF1;
+  color: #000;
+}
+
+.learn-more-btn:hover {
+  background-color: #495f8c;
+  color: whitesmoke;
 }
