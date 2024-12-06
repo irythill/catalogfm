@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b7c1e0;
+  height: 6rem;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-social a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #495f8c;
+}
+
+.footer-bottom {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
