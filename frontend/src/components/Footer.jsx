@@ -1,6 +1,6 @@
-import '../css/Footer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons';
+import '../css/Footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
   return (
@@ -23,7 +23,7 @@ const Footer = () => {
         <p>© 2024 Catalog.fm - All rights reserved.</p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

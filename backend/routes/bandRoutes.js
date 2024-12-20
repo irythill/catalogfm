@@ -20,7 +20,7 @@ const upload = multer({ storage: storage })
 router.get('/', bandController.getAllBands)
 router.get('/:id', bandController.getBandById)
 router.post('/', upload.single('image'), bandController.addBand)
-router.put('/:id', bandController.updateBand)
+router.put('/:id', upload.single('image'), bandController.updateBand)
 router.delete('/:id', bandController.deleteBand)
 
 module.exports = router;

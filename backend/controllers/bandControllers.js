@@ -44,11 +44,27 @@ exports.addBand = async (req, res) => {
 // update a band
 exports.updateBand = async (req, res) => {
   try {
-    const updatedBand = await Band.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    if (!updatedBand)
+    const updates = {
+      name: req.body.name,
+      genre: req.body.genre,
+      year: req.body.year,
+      description: req.body.description,
+    }
+
+    if (req.file) {
+      updates.image = req.file.path
+    }
+
+    const updatedBand = await Band.findByIdAndUpdate(req.params.id, updates, {
+      new: true
+    })
+
+    if (!updatedBand) {
       return res.status(404).json({ message: 'Band not found!'})
+    }
+
     res.json(updatedBand)
-  } catch (err) {
+} catch (err) {
     res.status(400).json({ message: err.message })
   }
 }

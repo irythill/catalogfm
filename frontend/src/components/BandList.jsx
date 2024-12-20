@@ -1,48 +1,48 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
-import ConfirmationModal from './ConfirmationModal';
-import '../css/BandList.css';
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
+import ConfirmationModal from './ConfirmationModal'
+import '../css/BandList.css'
 
 const BandList = () => {
-  const [bands, setBands] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [bandToDelete, setBandToDelete] = useState(null);
+  const [bands, setBands] = useState([])
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [bandToDelete, setBandToDelete] = useState(null)
 
-  const API_URL = 'http://localhost:5000';
+  const API_URL = 'http://localhost:5000'
 
   useEffect(() => {
     axios.get(`${API_URL}/bands`)
       .then(response => {
-        setBands(response.data);
+        setBands(response.data)
       })
       .catch(error => {
-        console.error('Error fetching the bands!', error);
-      });
-  }, []);
+        console.error('Error fetching the bands!', error)
+      })
+  }, [])
 
   const handleDeleteClick = (band) => {
-    setBandToDelete(band);
-    setIsModalOpen(true);
-  };
+    setBandToDelete(band)
+    setIsModalOpen(true)
+  }
 
   const handleConfirmDelete = () => {
     axios.delete(`${API_URL}/bands/${bandToDelete._id}`)
       .then(() => {
-        setBands(bands.filter(band => band._id !== bandToDelete._id));
-        setIsModalOpen(false);
+        setBands(bands.filter(band => band._id !== bandToDelete._id))
+        setIsModalOpen(false)
       })
       .catch(error => {
-        console.error('Error deleting the band!', error);
-      });
-  };
+        console.error('Error deleting the band!', error)
+      })
+  }
 
   const handleCancelDelete = () => {
-    setIsModalOpen(false);
-    setBandToDelete(null);
-  };
+    setIsModalOpen(false)
+    setBandToDelete(null)
+  }
 
   return (
     <div className="band-list-container">
@@ -77,7 +77,7 @@ const BandList = () => {
         onConfirm={handleConfirmDelete}
       />
     </div>
-  );
-};
+  )
+}
 
-export default BandList;
+export default BandList
